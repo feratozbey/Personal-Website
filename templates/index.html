@@ -6,30 +6,78 @@
     </section>
 </div>
 
-<div id="portfolio">
+
+<div id="portfolio" class="row justify-content-center" style="text-align:center">
     <div>
-        <h1 style="position:absolute; margin: 15vh 38vw 35vh;" >Portfolio Projects</h1>
+        <h1 style="position:absolute; margin: 4vh 30vw;" >Portfolio Projects</h1>
     </div>
-    <div class="row" style="width: 100vw; margin: 35vh 0; text-align:center;">
-        <div class="col-lg-6 col-md-6">
-            <h2>Text - Morse Code Generator</h2>
-            <img alt="Morse" src="{{ url_for('static', filename='images/morse.png') }}" width="300" height="150">
+
+    <div style="margin-top:50px;" class="row">
+
+        <div class="col-lg-4 col-md-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="{{ url_for('static', filename='images/cafe.jpg') }}" alt="Cafe Website Image">
+              <div class="card-body">
+                <h5 class="card-title">Melbourne Cafes Website</h5>
+                <p class="card-text">Melbourne cafes website. User can add cafes and list them with their features. Python Flask web application.</p>
+                <a class="icon fa-solid fa-globe" href="https://ferat-melbourne-cafes.herokuapp.com/"></a>
+                <a href="https://github.com/feratozbey/Melbourne-Cafes-Website-App" class="icon fa-brands fa-github"></a>
+              </div>
+            </div>
         </div>
-        <div class="col-lg-6 col-md-6">
-            <h2>Tic Tac Toe</h2>
-            <img alt="TicTacToe" src="{{ url_for('static', filename='images/tictactoe.png') }}" width="200" height="200">
+
+        <div class="col-lg-4 col-md-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="{{ url_for('static', filename='images/typing.jpg') }}" alt="Typing Image">
+              <div class="card-body">
+                <h5 class="card-title">Typing Speed Test Desktop App</h5>
+                <p class="card-text">A Tkinter GUI desktop application that tests user's typing speed(Python)</p>
+                <a href="https://github.com/feratozbey/Typing-Speed-Test-Desktop-App" class="icon fa-brands fa-github"></a>
+              </div>
+            </div>
         </div>
+
+
+        <div class="col-lg-4 col-md-4 d-flex justify-content-center" >
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="{{ url_for('static', filename='images/morse.jpg') }}" alt="Morse Image">
+              <div class="card-body">
+                <h5 class="card-title">Text to Morse Code Converter</h5>
+                <p class="card-text">Allows user to convert text into morse code(Python)</p>
+                <a href="https://github.com/feratozbey/Text-to-Morse-Code-Converter" class="icon fa-brands fa-github"></a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="{{ url_for('static', filename='images/tictactoe.jpg') }}" alt="Tictactoe Image">
+              <div class="card-body">
+                <h5 class="card-title">Tic Tac Toe Game</h5>
+                <p class="card-text">Text-based version of the Tic Tac Toe game(Python)</p>
+                <a href="https://github.com/feratozbey/Tic-Tac-Toe-Game" class="icon fa-brands fa-github"></a>
+              </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4 col-md-4 d-flex justify-content-center">
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="{{ url_for('static', filename='images/breakout.jpg') }}" alt="Breakout Image">
+              <div class="card-body">
+                <h5 class="card-title">Breakout Game</h5>
+                <p class="card-text">Using Python Turtle, built a clone of the 80s hit game Breakout(Python)</p>
+                <a href="https://github.com/feratozbey/Breakout-Game" class="icon fa-brands fa-github"></a>
+              </div>
+            </div>
+        </div>
+
     </div>
 </div>
 
-<div id="about">
-    <div class="col-lg-6 col-md-6"></div>
-    <div class="col-lg-6 col-md-6">
-        <h1 style="margin: 10vh 0; text-align:center;">About Me</h1>
-        <p style="margin: 10vh 10vw; text-align:center;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-    </div>
 
-</div>
+
+
+
 
 <div id="contact">
     <div class="col-lg-6 col-md-6"></div>

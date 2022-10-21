@@ -1,0 +1,7 @@
+name,image_file_path,website_link,github_link,description
+Melbourne Cafes Website,cafe.jpg,https://ferat-melbourne-cafes.herokuapp.com/,https://github.com/feratozbey/Melbourne-Cafes-Website-App,Melbourne cafes website. User can add cafes and list them with their features. Python Flask web application.
+Web Scraping - Amazon Price Tracker,amazon.jpg,,https://github.com/feratozbey/Amazon-Price-Tracker,"Web scraping project. Scrapes Amazon product page, gets price and emails it to user."
+ISS Overhead Notifier,iss.jpg,,https://github.com/feratozbey/ISS-Overhead-Notifier,"The App gets current location of International Space Station from an API and if ISS is near the user's given location, sends an email to user's email address."
+Typing Speed Test Desktop App,typing.jpg,,https://github.com/feratozbey/Typing-Speed-Test-Desktop-App,A Tkinter GUI desktop application that tests user's typing speed
+Text to Morse Code Converter,morse.jpg,,https://github.com/feratozbey/Text-to-Morse-Code-Converter,Allows user to convert text into morse code
+Tic Tac Toe Game,tictactoe.jpg,,https://github.com/feratozbey/Tic-Tac-Toe-Game,Text-based version of the Tic Tac Toe game

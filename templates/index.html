@@ -14,98 +14,122 @@
 
     <div style="margin-top:50px;" class="row">
 
+        {% for project in projects: %}
+        {% if project[0] != 'name' %}
         <div class="col-lg-4 col-md-4 d-flex justify-content-center">
             <div class="card" style="width: 18rem;">
-                <a href="https://ferat-melbourne-cafes.herokuapp.com/" target="blank">
-                    <img class="card-img-top" src="{{ url_for('static', filename='images/cafe.jpg') }}" alt="Cafe Website Image">
+                {% if project[2] != "": %}
+                <a href="{{ project[2] }}" target="_blank">
+                {% else: %}
+                <a href="{{ project[3] }}" target="_blank">
+                {% endif %}
+                    <img class="card-img-top" src="{{ url_for('static', filename='images/' + project[1]) }}" alt="{{ project[1] }}">
                 </a>
-              <div class="card-body">
-                <h5 class="card-title">Melbourne Cafes Website</h5>
-                <p class="card-text">Melbourne cafes website. User can add cafes and list them with their features. Python Flask web application.</p>
-                <a class="icon fa-solid fa-globe" href="https://ferat-melbourne-cafes.herokuapp.com/" target="blank"></a>
-                <a href="https://github.com/feratozbey/Melbourne-Cafes-Website-App" class="icon fa-brands fa-github" target="blank"></a>
-              </div>
+                <div class="card-body">
+                    <h5 class="card-title">{{ project[0] }}</h5>
+                    <p class="card-text">{{ project[4] }}</p>
+                    {% if project[2] != "": %}
+                    <a class="icon fa-solid fa-globe" href="{{ project[2] }}" target="_blank"></a>
+                    {% endif %}
+                    <a href="{{ project[3] }}" class="icon fa-brands fa-github" target="_blank"></a>
+                </div>
             </div>
         </div>
+        {% endif %}
+        {% endfor %}
 
-        <div class="col-lg-4 col-md-4 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
-                <a href="https://github.com/feratozbey/Amazon-Price-Tracker" target="_blank">
-                    <img class="card-img-top" src="{{ url_for('static', filename='images/amazon.jpg') }}" alt="Amazon Image">
-                </a>
-              <div class="card-body">
-                <h5 class="card-title">Web Scraping - Amazon Price Tracker</h5>
-                <p class="card-text">Web scraping project. Scrapes Amazon product page, gets price and emails it to user.</p>
-                <a href=href="https://github.com/feratozbey/Amazon-Price-Tracker" class="icon fa-brands fa-github" target="_blank"></a>
-              </div>
-            </div>
-        </div>
+<!--        <div class="col-lg-4 col-md-4 d-flex justify-content-center">-->
+<!--            <div class="card" style="width: 18rem;">-->
+<!--                <a href="https://ferat-melbourne-cafes.herokuapp.com/" target="blank">-->
+<!--                    <img class="card-img-top" src="{{ url_for('static', filename='images/cafe.jpg') }}" alt="Cafe Website Image">-->
+<!--                </a>-->
+<!--              <div class="card-body">-->
+<!--                <h5 class="card-title">Melbourne Cafes Website</h5>-->
+<!--                <p class="card-text">Melbourne cafes website. User can add cafes and list them with their features. Python Flask web application.</p>-->
+<!--                <a class="icon fa-solid fa-globe" href="https://ferat-melbourne-cafes.herokuapp.com/" target="blank"></a>-->
+<!--                <a href="https://github.com/feratozbey/Melbourne-Cafes-Website-App" class="icon fa-brands fa-github" target="blank"></a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
-                <div class="col-lg-4 col-md-4 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
-                <a href="https://github.com/feratozbey/ISS-Overhead-Notifier" target="blank">
-                    <img class="card-img-top" src="{{ url_for('static', filename='images/iss.jpg') }}" alt="ISS Image">
-                </a>
-              <div class="card-body">
-                <h5 class="card-title">ISS Overhead Notifier</h5>
-                <p class="card-text">The App gets current location of International Space Station from an API and if ISS is near the user's given location, sends an email to user's email address.</p>
-                <a href="https://github.com/feratozbey/ISS-Overhead-Notifier" class="icon fa-brands fa-github" target="blank"></a>
-              </div>
-            </div>
-        </div>
+<!--        <div class="col-lg-4 col-md-4 d-flex justify-content-center">-->
+<!--            <div class="card" style="width: 18rem;">-->
+<!--                <a href="https://github.com/feratozbey/Amazon-Price-Tracker" target="_blank">-->
+<!--                    <img class="card-img-top" src="{{ url_for('static', filename='images/amazon.jpg') }}" alt="Amazon Image">-->
+<!--                </a>-->
+<!--              <div class="card-body">-->
+<!--                <h5 class="card-title">Web Scraping - Amazon Price Tracker</h5>-->
+<!--                <p class="card-text">Web scraping project. Scrapes Amazon product page, gets price and emails it to user.</p>-->
+<!--                <a href=href="https://github.com/feratozbey/Amazon-Price-Tracker" class="icon fa-brands fa-github" target="_blank"></a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
-        <div class="col-lg-4 col-md-4 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
-                <a href="https://github.com/feratozbey/Typing-Speed-Test-Desktop-App" target="blank">
-                    <img class="card-img-top" src="{{ url_for('static', filename='images/typing.jpg') }}" alt="Typing Image">
-                </a>
-              <div class="card-body">
-                <h5 class="card-title">Typing Speed Test Desktop App</h5>
-                <p class="card-text">A Tkinter GUI desktop application that tests user's typing speed(Python)</p>
-                <a href="https://github.com/feratozbey/Typing-Speed-Test-Desktop-App" class="icon fa-brands fa-github" target="blank"></a>
-              </div>
-            </div>
-        </div>
+<!--                <div class="col-lg-4 col-md-4 d-flex justify-content-center">-->
+<!--            <div class="card" style="width: 18rem;">-->
+<!--                <a href="https://github.com/feratozbey/ISS-Overhead-Notifier" target="blank">-->
+<!--                    <img class="card-img-top" src="{{ url_for('static', filename='images/iss.jpg') }}" alt="ISS Image">-->
+<!--                </a>-->
+<!--              <div class="card-body">-->
+<!--                <h5 class="card-title">ISS Overhead Notifier</h5>-->
+<!--                <p class="card-text">The App gets current location of International Space Station from an API and if ISS is near the user's given location, sends an email to user's email address.</p>-->
+<!--                <a href="https://github.com/feratozbey/ISS-Overhead-Notifier" class="icon fa-brands fa-github" target="blank"></a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--        </div>-->
+
+<!--        <div class="col-lg-4 col-md-4 d-flex justify-content-center">-->
+<!--            <div class="card" style="width: 18rem;">-->
+<!--                <a href="https://github.com/feratozbey/Typing-Speed-Test-Desktop-App" target="blank">-->
+<!--                    <img class="card-img-top" src="{{ url_for('static', filename='images/typing.jpg') }}" alt="Typing Image">-->
+<!--                </a>-->
+<!--              <div class="card-body">-->
+<!--                <h5 class="card-title">Typing Speed Test Desktop App</h5>-->
+<!--                <p class="card-text">A Tkinter GUI desktop application that tests user's typing speed(Python)</p>-->
+<!--                <a href="https://github.com/feratozbey/Typing-Speed-Test-Desktop-App" class="icon fa-brands fa-github" target="blank"></a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
 
-        <div class="col-lg-4 col-md-4 d-flex justify-content-center" >
-            <div class="card" style="width: 18rem;">
-                <a href="https://github.com/feratozbey/Text-to-Morse-Code-Converter" target="blank">
-                   <img class="card-img-top" src="{{ url_for('static', filename='images/morse.jpg') }}" alt="Morse Image">
-                </a>
-              <div class="card-body">
-                <h5 class="card-title">Text to Morse Code Converter</h5>
-                <p class="card-text">Allows user to convert text into morse code(Python)</p>
-                <a href="https://github.com/feratozbey/Text-to-Morse-Code-Converter" class="icon fa-brands fa-github" target="blank"></a>
-              </div>
-            </div>
-        </div>
+<!--        <div class="col-lg-4 col-md-4 d-flex justify-content-center" >-->
+<!--            <div class="card" style="width: 18rem;">-->
+<!--                <a href="https://github.com/feratozbey/Text-to-Morse-Code-Converter" target="blank">-->
+<!--                   <img class="card-img-top" src="{{ url_for('static', filename='images/morse.jpg') }}" alt="Morse Image">-->
+<!--                </a>-->
+<!--              <div class="card-body">-->
+<!--                <h5 class="card-title">Text to Morse Code Converter</h5>-->
+<!--                <p class="card-text">Allows user to convert text into morse code(Python)</p>-->
+<!--                <a href="https://github.com/feratozbey/Text-to-Morse-Code-Converter" class="icon fa-brands fa-github" target="blank"></a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
-        <div class="col-lg-4 col-md-4 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
-                <a href="https://github.com/feratozbey/Tic-Tac-Toe-Game" target="blank">
-                    <img class="card-img-top" src="{{ url_for('static', filename='images/tictactoe.jpg') }}" alt="Tictactoe Image">
-                </a>
-              <div class="card-body">
-                <h5 class="card-title">Tic Tac Toe Game</h5>
-                <p class="card-text">Text-based version of the Tic Tac Toe game(Python)</p>
-                <a href="https://github.com/feratozbey/Tic-Tac-Toe-Game" class="icon fa-brands fa-github" target="blank"></a>
-              </div>
-            </div>
-        </div>
+<!--        <div class="col-lg-4 col-md-4 d-flex justify-content-center">-->
+<!--            <div class="card" style="width: 18rem;">-->
+<!--                <a href="https://github.com/feratozbey/Tic-Tac-Toe-Game" target="blank">-->
+<!--                    <img class="card-img-top" src="{{ url_for('static', filename='images/tictactoe.jpg') }}" alt="Tictactoe Image">-->
+<!--                </a>-->
+<!--              <div class="card-body">-->
+<!--                <h5 class="card-title">Tic Tac Toe Game</h5>-->
+<!--                <p class="card-text">Text-based version of the Tic Tac Toe game(Python)</p>-->
+<!--                <a href="https://github.com/feratozbey/Tic-Tac-Toe-Game" class="icon fa-brands fa-github" target="blank"></a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
-        <div class="col-lg-4 col-md-4 d-flex justify-content-center">
-            <div class="card" style="width: 18rem;">
-                <a href="https://github.com/feratozbey/Breakout-Game" target="blank">
-                    <img class="card-img-top" src="{{ url_for('static', filename='images/breakout.jpg') }}" alt="Breakout Image">
-                </a>
-              <div class="card-body">
-                <h5 class="card-title">Breakout Game</h5>
-                <p class="card-text">Using Python Turtle, built a clone of the 80s hit game Breakout(Python)</p>
-                <a href="https://github.com/feratozbey/Breakout-Game" class="icon fa-brands fa-github" target="blank"></a>
-              </div>
-            </div>
-        </div>
+<!--        <div class="col-lg-4 col-md-4 d-flex justify-content-center">-->
+<!--            <div class="card" style="width: 18rem;">-->
+<!--                <a href="https://github.com/feratozbey/Breakout-Game" target="blank">-->
+<!--                    <img class="card-img-top" src="{{ url_for('static', filename='images/breakout.jpg') }}" alt="Breakout Image">-->
+<!--                </a>-->
+<!--              <div class="card-body">-->
+<!--                <h5 class="card-title">Breakout Game</h5>-->
+<!--                <p class="card-text">Using Python Turtle, built a clone of the 80s hit game Breakout(Python)</p>-->
+<!--                <a href="https://github.com/feratozbey/Breakout-Game" class="icon fa-brands fa-github" target="blank"></a>-->
+<!--              </div>-->
+<!--            </div>-->
+<!--        </div>-->
 
     </div>
 </div>
